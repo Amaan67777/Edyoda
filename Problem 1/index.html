@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ques">
+           <h2> Write a program to print a new number with digits reversed from the original one. The number provided will be greater than or equal to 0</h2>
+
+            <h3>Input Format:</h3>
+            
+           <p> Input Integer in variable n</p>
+            
+            <h3>Output Format:</h3>
+            
+            <p>print the reverse of the number n.</p>
+            
+            <h3>Sample Input 0:</h3>
+            
+            <p>1234</p>
+            
+             <h3>Sample Output 0:</h3>
+            
+            <p>4321</p>
+        </div>
+        <div class="ans">
+            <pre>
+                function reverseNumber(n) {
+                    let reverse = 0;
+                    while (n > 0) {
+                      reverse = reverse * 10 + (n % 10);
+                      n = Math.floor(n / 10);
+                    }
+                    return reverse;
+                  }
+                  
+                  let num = 12345;
+                  console.log(reverseNumber(num));
+            </pre>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

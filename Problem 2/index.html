@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ques">
+            <h3>A student will not be allowed to sit in the exam if his/her attendance is less than 75%. if he/she has
+                medical causes reduce attendance criteria to 60%. Ask the user if he/she has a medical cause or not (
+                'Y' or 'N' ) and print accordingly. You were given a total no classes and total classes attended by the
+                student.</h3>
+            <h3>Input Format:</h3>
+            <p>The first line contains integer total_classes and the second line contains integer attended_classes and
+                the tired line contains string medical cause Y or N.</p>
+            <h3>Output Format:</h3>
+            <p>Print "True" or "False" without quotes.</p>
+            <h3>Sample Input 0:</h3>
+            <p>
+                250
+                <br>
+                150
+                <br>
+                N
+            </p>
+            <h3>Sample Output :</h3>
+            <p>False</p>
+        </div>
+        <div class="ans">
+            <pre>
+            const total_classes = parseInt(prompt("Enter total classes:"));
+            const attended_classes = parseInt(prompt("Enter attended classes:"));
+            const medical_cause = prompt("Do you have medical cause (Y/N):").toUpperCase();
+
+            const attendance = attended_classes / total_classes * 100;
+
+            if (medical_cause === "Y") {  
+            if (attendance >= 60) {
+            console.log(true);
+            } else {
+            console.log(false);
+            }
+            } else if (medical_cause === "N") {
+            if (attendance >= 75) {
+            console.log(true);
+            } else {
+            console.log(false);
+             }
+            } else {
+             console.log("Invalid input for medical cause. Enter 'Y' or 'N'.");
+            }
+            </pre>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
